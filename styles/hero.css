@@ -1,0 +1,197 @@
+#hero {
+  flex-direction: column;
+  gap: 2rem;
+
+  text-align: center;
+
+  position: relative;
+
+  & .container {
+    position: relative;
+
+    & > .blur {
+      position: absolute;
+      background: var(--pink-low);
+      z-index: -1;
+    }
+  }
+
+  & .content:nth-child(1) {
+   
+    background: url(../assets/images/hero-background.png) no-repeat 50%/cover;
+    background-position: bottom;
+
+    & .container {
+      height: 29rem;
+      
+      & nav {
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.25rem;
+      
+        & img {
+          height: 3rem;
+        }
+      }
+
+      & > div {
+        flex-direction: column;
+        max-width: 20.94rem;
+        gap: 1rem;
+        margin-inline: auto;
+
+        margin-top: 3rem;
+
+        & h1 {
+          font-size: var(--title-lg);
+        }
+
+        & p {
+          font-size: var(--text-lg);
+        }
+      }
+
+    }
+  }
+
+  & .content:nth-child(2) .container {
+    height: 15.6875rem;
+    justify-content: center;
+
+      & img {
+          width: 2.25rem;
+          position: absolute;
+      }
+
+      & div {
+          position: relative;
+
+          & p {
+            font-size: var(--text-md);
+          }
+
+          & img:nth-child(1) {
+            right: 3.375rem;
+            top: -2.5rem;
+          }
+
+          & img:nth-child(2) {
+            bottom: -2rem;
+            transform: rotate(-30deg);
+          }
+
+          & img:nth-child(3) {
+            bottom: -2.25rem;
+            right: 0;
+            transform: rotate(15deg);
+          }
+
+      }
+
+      & > :nth-child(2) {
+          position: absolute;
+          width: 13.875rem;
+          height: 13.875rem;
+          filter: blur(179px);
+
+          left: 0;
+          bottom: 0;
+      }
+
+  }    
+}
+
+@media (width>=64em) {
+  #hero {
+
+    & .content:nth-child(1) .container {
+       height: 59.25rem;
+          
+        & nav {
+          padding-inline: 1.25rem;
+          margin-top: 3.5rem;
+            
+          & img:nth-child(1) {
+            display: none;
+          }
+        }
+
+        & > div {
+          margin-top: 10.25rem;
+          max-width: 40.375rem;
+          gap: 2rem;
+        }
+
+        & :nth-child(3) {
+            width: 30.6875rem;
+            height: 30.6875rem;
+            filter: blur(334px);
+
+            right: -222px;
+            bottom: -265px;
+        }
+          
+        & :nth-child(4) {
+            width: 23.5rem;
+            height: 23.5rem;
+            filter: blur(254px);
+
+            left: -258px;
+            bottom: 78px;
+        }
+
+        & :nth-child(5) {
+            width: 15.0625rem;
+            height: 15.0625rem;
+            filter: blur(234px);
+
+            right: -97px;
+            bottom: 341px;
+        }
+      
+    }
+  
+    & .content:nth-child(2) .container {
+      height: 36rem;      
+          
+      & div {
+        max-width: 75rem;    
+
+        & p {
+          line-height: 200%;
+        }
+
+        & img {
+          width: 5rem;
+
+          &:nth-child(1) {
+            top: -5rem;
+            left: 50%;
+          }
+
+          &:nth-child(2) {
+            bottom: -5rem;
+            transform: rotate(99.47deg);
+          }
+
+          &:nth-child(3) {
+            bottom: -5rem;
+            transform: rotate(-14.483deg);
+          }
+        }
+
+      }
+      
+      & > :nth-child(2) {
+        width: 33.625rem;
+        height: 33.625rem;
+        filter: blur(434px);
+
+        left: 232px;
+        bottom: 0;
+      }
+
+        
+    }    
+  }
+}

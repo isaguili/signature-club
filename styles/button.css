@@ -1,0 +1,12 @@
+a.button {
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-title);
+
+  display: flex;
+  height: 2.5rem;
+  background-color: var(--pink-dark);
+  padding: .75rem 1.25rem;
+  border-radius: 8px;
+}
