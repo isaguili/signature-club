@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1.25rem;
+
+  max-width: 375px;
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.desktop-only {
+  display: none;
+}
+
+strong {
+  color: var(--blue-base);
+}
+
+@media (width>=64em) {
+
+  .container {  
+    max-width: 90em;
+    padding-inline: 7.5rem;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+  
+}
