@@ -1,12 +1,48 @@
 a.button {
   text-decoration: none;
   font-size: var(--text-sm);
-  font-weight: 700;
   color: var(--text-title);
 
   display: flex;
   height: 2.5rem;
-  background-color: var(--pink-dark);
   padding: .75rem 1.25rem;
   border-radius: 8px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: var(--pink-dark);
+    inset: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 2rem;
+    height: 2rem;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: -1;
+
+    background-color: var(--pink-light);
+    border-radius: 99%;
+    opacity: .2;
+    
+    transition: transform .8s;
+  }
+
+
+}
+a.button:hover {
+  &::after {
+    transform: translate(-50%, -50%) scale(6);
+  } 
+
 }

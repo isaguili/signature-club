@@ -15,10 +15,6 @@
   display: none;
 }
 
-strong {
-  color: var(--blue-base);
-}
-
 @media (width>=64em) {
 
   .container {  
