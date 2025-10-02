@@ -11,16 +11,12 @@
   font-family: "Raleway", sans-serif;
 
   --title-lg: 1.75rem;
-  --title-md: 2.5rem;
-  --title-sm: 2rem;
-  --title-xs: 1rem;
-
-  --text-lg: .875rem;
+  --title-md: 1.5rem;
+  
   --text-md: 1rem;
   --text-sm: .875rem;
-  --text-xs: .75rem;
-  --text-tag: .625rem;
-
+  --text-xs: .625rem;
+  
   /* brand colors */
   --pink-light: #C59DD2;
   --pink-base: #9547A5;
@@ -64,8 +60,10 @@ img {
 
   :root {
     --title-lg: 3rem;
+    --title-md: 2rem;
 
-    --text-lg: 1.25rem;
     --text-md: 2rem;
+    --text-sm: 1rem;
+    --text-xs: 1rem;
   }
 }

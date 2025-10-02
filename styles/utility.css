@@ -15,6 +15,12 @@
   display: none;
 }
 
+.blur {
+  position: absolute;
+  background: var(--pink-low);
+  z-index: -1;
+}
+
 @media (width>=64em) {
 
   .container {  

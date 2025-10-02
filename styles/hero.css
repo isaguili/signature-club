@@ -11,8 +11,6 @@
 
     & > .blur {
       position: absolute;
-      background: var(--pink-low);
-      z-index: -1;
     }
   }
 
@@ -60,7 +58,7 @@
         }
 
         & p {
-          font-size: var(--text-lg);
+          font-size: var(--text-sm);
           line-height: 140%;
           opacity: 0;
           animation: hero-appear 2s ease 1s forwards;
