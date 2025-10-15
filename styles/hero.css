@@ -181,7 +181,7 @@
   }
 }
 
-@media (width>=64em) {
+@media (width>=70em) {
   #hero {
 
     & .content:nth-child(1) .container {

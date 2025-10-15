@@ -15,6 +15,9 @@ a.button {
   &::before {
     position: absolute;
     content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--pink-dark);
     inset: 0;
     z-index: -1;
@@ -35,14 +38,13 @@ a.button {
     border-radius: 99%;
     opacity: .2;
     
-    transition: transform .8s;
+    transition: transform .2s;
   }
 
-
 }
+
 a.button:hover {
   &::after {
-    transform: translate(-50%, -50%) scale(6);
+    transform: translate(-50%, -50%) scale(8);
   } 
-
 }

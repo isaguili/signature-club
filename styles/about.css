@@ -54,7 +54,7 @@
       }
 
       & span {
-        font-size: var(--text-xs);
+        font-size: var(--text-2xs);
       }
 
       & > img {
@@ -269,10 +269,10 @@
   }
 }
 
-@media (width>=64em) {
+@media (width>=70em) {
 
   #about {
-
+  
     & .container {
       gap: 5.5rem;
       height: 99.125rem;
@@ -283,7 +283,6 @@
       
       & .book-kit {
         width: 90rem;
-        height: 99.125rem;
         position: relative;
 
         & .blur {  

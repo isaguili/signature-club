@@ -1,0 +1,406 @@
+#pricing {
+  & .container {
+    width: 375px;
+    padding: 6.5rem 3.25rem;
+    text-align: center;
+
+    & h2 {
+      font-size: var(--title-md);
+    }
+    
+    & .cards {
+      display: flex;
+      align-items: end;
+      gap: 1rem;
+
+      width: 20rem;
+      height: 28.5rem;
+      
+      overflow: hidden;      
+
+      & .roll {
+        display: flex;
+        width: 54rem;
+        gap: 1rem;
+
+        &:hover {
+         animation: movecards 8s linear infinite both;
+         cursor: pointer;
+        }
+      }
+      
+      & .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 17rem;
+        height: 25rem;
+        padding: 2rem 1.75rem 2rem;
+
+        transition: all .5s ease;
+
+        border-radius: 1.5rem;
+        border: 1px solid var(--shape-stroke);
+        background: var(--shape-base);
+
+        & header {
+          text-align: start;
+
+          & span {
+            color: var(--blue-light);
+            font-weight: 700;
+          }
+  
+          & h3 {
+            font-size: 40px;
+            margin-top: 1.5rem;
+            margin-bottom: .5rem;
+  
+            & small {
+              font-size: 1rem;
+            }
+          }
+
+          & p {
+            color: var(--text-label);
+            font-size: var(--text-sm);
+            line-height: 140%;
+          }
+          
+        }
+        
+        & .details {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          & ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 13rem;
+          }
+  
+          & li {
+            display: flex;
+            width: 224px;
+            font-size: var(--text-xs);
+            gap: 8px;
+          }
+  
+          & li img {
+            width: 14.061px;
+            height: 14.073px;
+            flex-shrink: 0;
+          }
+
+          a.button {
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+                      
+            &::before {
+              content: 'Assinar Mensal';
+              font-weight: 700;
+              background-color: var(--blue-dark);
+              z-index: 0;
+            }
+
+            &::after {
+              background-color: var(--blue-light);
+              z-index: 0;
+            }
+
+          }
+        }
+
+        &:hover {
+          border-color: var(--shape-hover);
+          background-color: var(--shape-hover);
+          box-shadow: 0 0 66px 0 rgba(53, 139, 185, 0.10);
+        }
+
+      }
+      
+      & .card:nth-child(6) {
+        position: relative;
+
+        & > img {
+            position: absolute;
+            width: 1px;
+            top: 0;
+            z-index: -1;
+
+            transition: transform .5s;
+          }
+      
+        & header span {
+            color: var(--pink-light);
+        }
+        
+        & .details a.button {
+           
+          &::before {
+            content: 'Assinar Semestral';
+            background-color: var(--pink-dark);
+          }
+
+            &::after {
+              background-color: var(--pink-light);
+            }
+        }
+
+        &:hover{
+          position: relative;
+        
+          & > img {
+            position: absolute;
+            width: 45px;
+            transform: translateY(-49.9px);
+            z-index: -1;
+          }
+        }
+        
+      }
+
+      & .card:nth-child(3) a.button::before {
+        content: 'Assinar Anual';
+      }
+
+    }
+  }
+}
+
+@keyframes movecards {
+  0% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(0);
+  }
+ 
+  20% {
+    transform: translateX(-16.5rem);
+  }
+  45% {
+    transform: translateX(-16.5rem);
+  } 
+
+  50% {
+    transform: translateX(-34rem);
+  } 
+  75% {
+    transform: translateX(-34rem);
+  }
+
+  80% {
+    transform: translateX(-16.5rem);
+  }
+  95% {
+    transform: translateX(-16.5rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (width>=70em) {
+
+  #pricing {
+    position: relative;
+    height: 77.5rem;
+    background: url('../assets/images/pricing-background.png') no-repeat;
+    
+    & .blur {
+      position: absolute;
+      width: 59rem;
+      height: 59rem;
+      border-radius: 59rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--shape-base);
+      filter: blur(284px);
+    }
+    
+    & .container {
+      width: 100%;
+      margin: 0 auto 12.1875rem;
+      padding-top: 0;
+      gap: 3.5rem;
+
+      & h2 {
+        width: 19.375rem;
+        margin-inline: auto;
+      }
+      
+      & .cards {
+        width: 100%;
+        height: 37.875rem;
+        justify-content: center;
+        align-items: center;
+
+        & .roll {
+          width: 65.625rem;
+          height: 100%;
+          position: relative;
+          animation: none!important;
+
+          & > img {
+            position: absolute;
+            transition: transform .8s ease;
+
+            &:nth-child(1) {
+              width: 1.625rem;
+              top: 71px;
+              left: 330.45px;   
+            }
+
+            &:nth-child(2) {
+              width: 13.06px;
+              top: 109.55px;
+              left: 326px;
+            }
+
+            &:nth-child(3) {
+              width: 23.22px;
+              bottom: 68.78px;
+              right: 341.43px;
+            }
+
+            &:nth-child(4) {
+              width: 11.25px;
+              bottom: 68.1px;
+              right: 385.75px;
+            }
+          }
+
+          &:hover {
+
+            & > img {
+
+              &:nth-child(1) {
+                transform: translateX(-293.21px) translateY(61px);    
+              }
+
+              &:nth-child(2) {
+                transform: translateX(-292.28px) translateY(62.07px); 
+              }
+
+              &:nth-child(3) {
+                transform: translateX(250.16px) translateY(30.11px);
+              }
+
+              &:nth-child(4) {
+                transform: translateX(250.99px) translateY(30.37px);
+              }
+            }
+
+            & .card:nth-child(5) {
+              animation: cards-1 .8s forwards;
+            }
+
+            & .card:nth-child(6) {
+              background-color: var(--shape-base);
+            }
+
+            & .card:nth-child(7) {
+              animation: cards-3 .8s forwards;
+            }
+          }
+
+          &:has(.card:nth-child(5):hover) {
+            & > img {
+              &:nth-child(1) {
+                transform: translateX(-293.21px) translateY(61px) rotate(19.25deg);
+              }
+
+              &:nth-child(2) {
+                transform: translateX(-292.28px) translateY(62.07px) rotate(21.34deg);
+              }
+            }
+          }
+
+          &:has(.card:nth-child(7):hover) {
+            & > img:nth-child(3) {
+              transform: translateX(250.16px) translateY(30.11px) rotate(-19.25deg);
+            }
+
+            & > img:nth-child(4) {
+              transform: translateX(250.99px) translateY(30.37px) rotate(-21.34deg);
+            }
+          }        
+
+          & .card {
+            position: absolute;
+          }
+
+          & .card:nth-child(5) {
+            top: 80px;
+            left: 315px;
+            transform: rotate(0deg);
+            scale: 0;
+
+            &:hover {
+              translate: 0px -8px;
+              z-index: 2;
+            }
+          }
+
+          & .card:nth-child(6) {
+            top: 82.0947px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            background-color: var(--shape-hover);
+
+            & > img:nth-child(1) {
+              width: 45.05px;
+              top: -51.19px;
+              left: 32px;
+              z-index: -2;
+              transition: transform .5s ease;
+            }
+
+            &:hover {
+              top: 68px;
+              background-color: var(--shape-hover);
+
+              & > img {
+                transform: translateY(0px);
+              }
+            }
+          }
+
+          & .card:nth-child(7) {
+            scale: 0;
+            top: 80px;
+            right: 315px;
+            transform: rotate(0deg);
+
+            &:hover {
+              translate: 0px -8px;
+              z-index: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes cards-1 {
+  to {
+    scale: 1;
+    transform: translateX(-200px) translateY(40px) rotate(-8deg);
+  }
+}
+
+@keyframes cards-3 {
+  to {
+    scale: 1;
+    transform: translateX(200px) translateY(40px) rotate(8deg);
+  }
+}
+
