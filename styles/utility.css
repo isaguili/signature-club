@@ -21,13 +21,20 @@
   z-index: -1;
 }
 
-@media (width>=64em) {
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (width>=80em) {
 
   .container {  
     max-width: 90em;
     padding-inline: 7.5rem;
   }
-
   .desktop-only {
     display: initial;
   }

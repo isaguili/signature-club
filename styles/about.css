@@ -269,20 +269,21 @@
   }
 }
 
-@media (width>=70em) {
+@media (width>=80em) {
 
   #about {
-  
+    height: 99.125rem;
+    
     & .container {
       gap: 5.5rem;
-      height: 99.125rem;
       
       & header {
         margin-top: 14.6875rem;
       }
       
       & .book-kit {
-        width: 90rem;
+        width: calc(100% + 15rem);
+        height: 57.5rem;
         position: relative;
 
         & .blur {  
@@ -294,7 +295,7 @@
 
         & > img {  
           top: 134px;
-          left: 473px;
+          left: 403px;
           
           width: 29.1875rem;
         }
@@ -304,7 +305,7 @@
           gap: 23.5px;
 
           top: 270px;
-          left: 550px;  
+          left: 480px;  
 
           & > img {
             width: 10.906rem;
@@ -313,7 +314,7 @@
 
         .bookmark {
           top: 149.16px;
-          left: 618.98px;
+          left: 548.98px;
 
           .content {
             width: 22.517rem;
@@ -353,7 +354,7 @@
 
         .pin {
           top: 455px;
-          left: 572px;
+          left: 502px;
 
 
           .content {

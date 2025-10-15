@@ -1,0 +1,106 @@
+footer {
+  background: url(../assets/images/book-trace-background.png) no-repeat top/cover;
+  
+  .container {
+    height: 25.9375rem;
+    gap: 2.5rem;
+
+    & #social-links {
+      margin-top: 6.125rem;
+      flex-direction: column;
+      width: 19.4375rem;
+      align-items: center;
+      gap: .75rem;
+
+      & > img {
+        width: 9.91375rem;
+      }
+    
+      & .line {
+        width: 100%;
+        height: 1px;
+        background: var(--shape-stroke);
+      }
+
+      & nav {
+        gap: 0.8875rem;
+        
+        & a {
+          display: flex;
+          padding: .5rem; 
+          
+          & img {
+            transition: scale .2s ease;
+          }
+          
+          &:hover > img {
+            scale: 1.4;
+            filter: brightness(1.2);
+          }
+        }
+      }
+    }
+
+    & #informations {
+      margin-inline: auto;
+      gap: 1.5rem;
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        & ul {
+          display: flex;
+          flex-direction: column;
+          gap: .75rem;
+        }
+
+        & a {
+          text-decoration: none;
+          font-size: var(--text-sm);
+          color: var(--blue-light);
+
+          transition: all .2s ease;
+        
+          
+          &:hover {
+            color: var(--shape---text-title);
+          }
+        }
+      }
+
+    }
+
+
+  }
+}
+
+@media (width>=80em) {
+
+  footer {
+    background: url(../assets/images/book-background.png) no-repeat top/cover;
+    
+    .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        & #social-links {
+          margin-top: 0;
+
+          & > img {
+            width: 16.5rem;
+          }
+
+          
+        }
+
+        & #informations {
+          margin: 0;
+          flex-direction: row;
+          gap: 3.5rem;
+        }
+    }
+  }
+}

@@ -57,7 +57,7 @@ img {
   height: auto;
 }
 
-@media (width>=70em) {
+@media (width>=80em) {
 
   :root {
     --title-lg: 3rem;

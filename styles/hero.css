@@ -1,5 +1,6 @@
 #hero {
   flex-direction: column;
+  overflow: hidden;
   gap: 2rem;
 
   text-align: center;
@@ -181,7 +182,7 @@
   }
 }
 
-@media (width>=70em) {
+@media (width>=80em) {
   #hero {
 
     & .content:nth-child(1) .container {
@@ -198,7 +199,7 @@
 
         & > div {
           margin-top: 10.25rem;
-          max-width: 40.375rem;
+          max-width: 100%;
           gap: 2rem;
         }
 
