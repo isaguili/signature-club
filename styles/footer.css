@@ -42,8 +42,8 @@ footer {
     }
 
     & #informations {
-      margin-inline: auto;
       gap: 1.5rem;
+      justify-content: space-between;
 
       & > div {
         display: flex;
@@ -52,7 +52,6 @@ footer {
 
         & ul {
           display: flex;
-          flex-direction: column;
           gap: .75rem;
         }
 
@@ -69,12 +68,11 @@ footer {
           }
         }
       }
-
     }
-
-
   }
 }
+
+/* responsive design*/
 
 @media (width>=80em) {
 
@@ -92,8 +90,6 @@ footer {
           & > img {
             width: 16.5rem;
           }
-
-          
         }
 
         & #informations {

@@ -7,7 +7,7 @@
 }
 
 :root {
-
+  
   font-family: "Raleway", sans-serif;
 
   --title-lg: 1.75rem;
@@ -45,6 +45,7 @@
 body {
   background-color: var(--shape-background);
   color: var(--text-body);
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -57,8 +58,9 @@ img {
   height: auto;
 }
 
-@media (width>=80em) {
+/* responsive design*/
 
+@media (width>=80em) {
   :root {
     --title-lg: 3rem;
     --title-md: 2rem;
@@ -68,3 +70,6 @@ img {
     --text-2xs: 1rem;
   }
 }
+
+
+

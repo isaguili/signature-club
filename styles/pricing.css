@@ -1,7 +1,6 @@
 #pricing {
 
   & .container {
-    width: 375px;
     padding: 6.5rem 3.25rem;
     text-align: center;
 
@@ -10,18 +9,16 @@
     }
     
     & .cards {
-      display: flex;
       align-items: end;
-      gap: 1rem;
       margin-top: 1rem;
-
+      
       width: 20rem;
       height: 28.5rem;
+      gap: 1rem;
       
-      overflow: hidden;      
+      overflow: hidden;
 
       & .roll {
-        display: flex;
         width: 54rem;
         gap: 1rem;
 
@@ -32,19 +29,20 @@
       }
       
       & .card {
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+        
         width: 17rem;
         height: 25rem;
         padding: 2rem 1.75rem 2rem;
 
-        transition: all .5s ease;
-
         border-radius: 1.5rem;
         border: 1px solid var(--shape-stroke);
         background: var(--shape-base);
+        
+        transition: all .5s ease;
+
 
         & header {
           text-align: start;
@@ -55,7 +53,7 @@
           }
   
           & h3 {
-            font-size: 40px;
+            font-size: 2.5rem;
             margin-top: 1.5rem;
             margin-bottom: .5rem;
   
@@ -73,7 +71,6 @@
         }
         
         & .details {
-          display: flex;
           flex-direction: column;
           gap: 1.5rem;
 
@@ -92,7 +89,6 @@
           & li img {
             width: 14.061px;
             height: 14.073px;
-            flex-shrink: 0;
           }
 
           a.button {
@@ -101,7 +97,6 @@
             z-index: 1;
                       
             &::before {
-              content: 'Assinar Mensal';
               font-weight: 700;
               background-color: var(--blue-dark);
               z-index: 0;
@@ -122,6 +117,10 @@
         }
 
       }
+
+      & .card:nth-child(5) a.button::before {
+        content: 'Assinar Mensal';
+      }
       
       & .card:nth-child(6) {
         position: relative;
@@ -133,10 +132,32 @@
             z-index: -1;
 
             transition: transform .5s;
-          }
+        }
+
+        &::before {
+          position: absolute;
+          
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 1.494rem;
+          padding: 0.563rem 1.25rem;
+          
+          border-radius: 1.5rem;
+          background: var(--shape-stroke);
+          
+          content: 'POPULAR';
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 5%;
+
+          top: 23.91px;
+          right: 24.43px;
+          z-index: 1;
+        }
       
         & header span {
-            color: var(--pink-light);
+          color: var(--pink-light);
         }
         
         & .details a.button {
@@ -161,16 +182,17 @@
             z-index: -1;
           }
         }
-        
       }
 
-      & .card:nth-child(3) a.button::before {
+      & .card:nth-child(7) a.button::before {
         content: 'Assinar Anual';
       }
 
     }
   }
 }
+
+/* animations */
 
 @keyframes movecards {
   0% {
@@ -206,6 +228,22 @@
   }
 }
 
+@keyframes cards-1 {
+  to {
+    scale: 1;
+    transform: translateX(-200px) translateY(40px) rotate(-8deg);
+  }
+}
+
+@keyframes cards-3 {
+  to {
+    scale: 1;
+    transform: translateX(200px) translateY(40px) rotate(8deg);
+  }
+}
+
+/* responsive */
+
 @media (width>=80em) {
 
   #pricing {
@@ -216,16 +254,18 @@
       position: absolute;
       width: 59rem;
       height: 59rem;
+      
+      background: var(--shape-base);
       border-radius: 59rem;
+      filter: blur(284px);
+      
       left: 50%;
       transform: translateX(-50%);
-      background: var(--shape-base);
-      filter: blur(284px);
     }
     
     & .container {
       width: 100%;
-      margin: 12.125rem auto;
+      margin: 6.135rem auto 12.125rem;
       padding-top: 0;
       gap: 3.5rem;
 
@@ -252,24 +292,28 @@
 
             &:nth-child(1) {
               width: 1.625rem;
+
               top: 71px;
               left: 330.45px;   
             }
 
             &:nth-child(2) {
-              width: 13.06px;
+              width: 0.816rem;
+              
               top: 109.55px;
               left: 326px;
             }
 
             &:nth-child(3) {
-              width: 23.22px;
+              width: 1.451rem;
+             
               bottom: 68.78px;
               right: 341.43px;
             }
 
             &:nth-child(4) {
-              width: 11.25px;
+              width: 0.703rem;
+
               bottom: 68.1px;
               right: 385.75px;
             }
@@ -395,17 +439,55 @@
   }
 }
 
-@keyframes cards-1 {
-  to {
-    scale: 1;
-    transform: translateX(-200px) translateY(40px) rotate(-8deg);
-  }
-}
+/* reduce animations */
 
-@keyframes cards-3 {
-  to {
-    scale: 1;
-    transform: translateX(200px) translateY(40px) rotate(8deg);
+@media (prefers-reduced-motion: reduce) {
+
+  @media (width>=80em) {
+
+    #pricing .container .cards .roll {
+      animation: none!important;
+      transform: none!important;
+
+      & .card {
+        &:nth-child(5) {
+          top: 120px;
+          left: 115px;
+          transform: rotate(-8deg);
+          scale: 1;
+        }
+
+        &:nth-child(7) {
+          top: 120px;
+          right: 115px;
+          transform: rotate(8deg);
+          scale: 1;
+        }
+      }
+
+      & > img {
+          &:nth-child(1) {
+            transform: translateX(-293.21px) translateY(61px);  
+          }
+
+          &:nth-child(2) {
+            transform: translateX(-292.28px) translateY(62.07px); 
+          }
+
+          &:nth-child(3) { 
+            transform: translateX(250.16px) translateY(30.11px);
+          }
+
+          &:nth-child(4) {
+            transform: translateX(250.99px) translateY(30.37px);
+          }
+      }
+    }
+
+    @keyframes cards-1 {  }
+    @keyframes cards-3 {  }
+  
   }
+
 }
 

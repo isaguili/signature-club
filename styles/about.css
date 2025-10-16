@@ -5,15 +5,13 @@
     align-items: center;
     
     & header {   
-      display: flex;
       flex-direction: column;
       margin-inline: auto;
-      
       text-align: center;
       
       & h2 {
-        font-size: var(--title-md);
         display: flex;
+        font-size: var(--title-md);
       }
       
       & p {
@@ -38,11 +36,8 @@
       }
 
       & .blur {  
-        display: block;
-        scale: 1;
         width: 18.625rem;
         height: 18.625rem;
-        flex-shrink: 0;
         filter: blur(103px);
         border-radius: 50%;
 
@@ -58,7 +53,6 @@
       }
 
       & > img {
-        scale: 1;
         z-index: 1;
         
         top: 53.7703px;
@@ -67,12 +61,12 @@
         width: 9.824rem;
       }
 
-      .bookmark, .pin, .book {
+      & .bookmark, .pin, .book {
         scale: 0;
         transition: scale .5s;
       }
 
-      .book {
+      & .book {
         width: 5.5625rem;
         gap: 11.31px;
 
@@ -87,7 +81,7 @@
         }
       }   
 
-      .bookmark {
+      & .bookmark {
         top: 59.58px;
         left:137.27px;
 
@@ -129,7 +123,6 @@
           }
 
           & :nth-child(4) {
-            position: absolute;
             bottom: -55.17px;
           }
         }
@@ -137,23 +130,21 @@
 
       }
 
-      .pin {
+      & .pin {
         top: 154.56px;
         left: 111.12px;
 
         animation: back-pin 1s ease forwards;
 
         .content {
-          width: 110.15px;
-          height: 111.5px;
-          position: absolute;
-
-          & :nth-child(1) {
+          width: 6.884rem;
+          height: 6.969rem;
+          
+          & > * {
             position: absolute;
           }
 
           & :nth-child(2) {
-            position: absolute;
             width: 35.292px;
             height: 42.747px;
 
@@ -162,7 +153,6 @@
           }
 
           & :nth-child(3) {
-            position: absolute;
             width: 74.887px;
             height: 85.405px;
             transform: rotate(-7.548deg);
@@ -196,6 +186,8 @@
     }
   }
 }
+
+/* animations */
 
 @keyframes move-book {
  
@@ -246,7 +238,6 @@
 }
 
 @keyframes move-bookmark {
-
   50% {
     transform: translateX(100px);
   }
@@ -269,6 +260,8 @@
   }
 }
 
+/* responsive design*/
+
 @media (width>=80em) {
 
   #about {
@@ -284,28 +277,28 @@
       & .book-kit {
         width: calc(100% + 15rem);
         height: 57.5rem;
-        position: relative;
 
         & .blur {  
+          top: 366px;
+         
           width: 58.125rem;
           height: 58.125rem;
           filter: blur(200px);
-          top: 366px;
         }
 
         & > img {  
           top: 134px;
-          left: 403px;
+          left: 463px;
           
           width: 29.1875rem;
         }
 
         .book {
           width: 16.531rem;
-          gap: 23.5px;
+          gap: 1.469rem;
 
           top: 270px;
-          left: 480px;  
+          left: 540px;  
 
           & > img {
             width: 10.906rem;
@@ -314,7 +307,7 @@
 
         .bookmark {
           top: 149.16px;
-          left: 548.98px;
+          left: 618.98px;
 
           .content {
             width: 22.517rem;
@@ -348,37 +341,33 @@
               bottom: -169.43px;
             }
           }
-          
-
         }
 
         .pin {
           top: 455px;
-          left: 502px;
-
+          left: 562px;
 
           .content {
-            width: 305.69px;
-            height: 368.1px;
+            width: 19.106rem;
+            height: 23.006rem;
 
             & :nth-child(2) {
-              width: 104.852px;
-              height: 127px;
+              width: 6.553rem;
+              height: 7.938rem;
 
               top: 45px;
               left: 16.65px;
             }
 
             & :nth-child(3) {
-              width: 222px;
-              height: 254px;
+              width: 13.875rem;
+              height: 15.875rem;
               transform: rotate(-8deg);
             
               top: 114.1px;
               right: 0;
             }
           }
-
         }
       
       }
@@ -458,6 +447,54 @@
     }
   }
 
-  
-
 }
+
+/* reduce animations */
+
+@media (prefers-reduced-motion: reduce) {
+  
+  #about .container {
+
+      & .book-kit {
+
+        .book, .bookmark, .pin {
+          scale: 1;
+          animation: none !important;
+        }
+
+      }
+
+      & .book {
+        transform: translateX(-100px) translateY(-100px);
+      }   
+
+      .bookmark {
+        transform: translateX(100px);
+      }
+        
+      .pin {
+        transform: translateX(-100px);
+      }
+
+    }
+ 
+  @media (width>=80em) {
+    #about .container {
+
+      & .book {
+        transform: translateX(-300px) translateY(-200px);
+      }   
+
+      .bookmark {
+        transform: translateX(300px);
+      }
+        
+      .pin {
+        transform: translateX(-300px);
+      }
+
+    }
+  }
+}
+
+  
