@@ -22,8 +22,3 @@ Este projeto foi construído para:
 - Uso de **transições e pseudo-classes** para criar transições.
 - Desenvolvimento de animações suaves e reversíveis utilizando @keyframes.
 - Implementação de **acessibilidade com `prefers-reduced-motion`**, garantindo conforto visual para usuários sensíveis a movimento.
-
- 
-### 👩‍💻 Autora
-**Isabella Guimarães**  
-Estudante de Análise e Desenvolvimento de Sistemas
